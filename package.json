@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "get-stdin": "^4.0.1",
+    "postcss": "^5.0.13",
+    "postcss-sorting": "^1.0.1"
+  },
+  "private": true
+}

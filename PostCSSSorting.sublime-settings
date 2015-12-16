@@ -1,0 +1,4 @@
+{
+	// Sort order. Please visit https://github.com/hudochenkov/postcss-sorting for all rules and predefined configs
+	"sort-order": "default"
+}
