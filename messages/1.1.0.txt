@@ -1,0 +1,4 @@
+Version 1.1.0
+
+* Update postcss-sorting to 1.1.0
+* Support for SCSS files to sort

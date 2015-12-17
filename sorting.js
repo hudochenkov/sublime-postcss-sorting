@@ -1,12 +1,13 @@
 'use strict';
 var stdin = require('get-stdin');
 var postcss = require('postcss');
+var scss = require('postcss-scss');
 var sorting = require('postcss-sorting');
 
 stdin(function (data) {
 	var opts = JSON.parse(process.argv[2]);
 
-	postcss(sorting(opts)).process(data)
+	postcss(sorting(opts)).process(data, { syntax: scss })
 	.then(function (result) {
 		process.stdout.write(result.css);
 	}).catch(function (err) {

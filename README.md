@@ -4,7 +4,7 @@ Sublime Text plugin to sort CSS rules content with specified order. Powered by [
 
 ![](screenshot.gif)
 
-Works only with CSS and PostCSS and not with preprocessors like Sass or LESS.
+Works only with CSS, SCSS and PostCSS.
 
 
 ## Install
