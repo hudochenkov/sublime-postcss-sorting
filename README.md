@@ -34,7 +34,8 @@ You can specify sort order and grouping. See the [postcss-sorting documentation]
 
 ```json
 {
-	"sort-order": "default"
+	"sort-order": "default",
+	"sort-on-save": false
 }
 ```
 
@@ -49,7 +50,8 @@ Example:
 {
 	"settings": {
 		"PostCSSSorting": {
-			"sort-order": ["padding", "margin"]
+			"sort-order": ["padding", "margin"],
+			"sort-on-save": true
 		}
 	}
 }

@@ -1,4 +1,9 @@
 {
 	// Sort order. Please visit https://github.com/hudochenkov/postcss-sorting for all rules and predefined configs
-	"sort-order": "default"
+	"sort-order": "default",
+
+	// Set true to sort on save every file with supported syntax
+	"sort-on-save": false
+
+
 }
