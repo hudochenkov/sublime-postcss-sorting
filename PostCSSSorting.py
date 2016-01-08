@@ -23,12 +23,10 @@ def get_setting(view, key):
 
 	return settings.get(key)
 
-
 def is_supported_syntax(view):
 	syntax = splitext(basename(view.settings().get('syntax')))[0]
 
 	return syntax in ('CSS', 'PostCSS', 'SCSS')
-
 
 class PostcsssortingCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
