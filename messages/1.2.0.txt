@@ -1,0 +1,7 @@
+Version 1.2.0
+
+* Added options for auto-sorting on save (disabled by defaut):
+
+	{
+		"sort-on-save": false
+	}
