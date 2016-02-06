@@ -35,6 +35,7 @@ You can specify sort order and grouping. See the [postcss-sorting documentation]
 ```json
 {
 	"sort-order": "default",
+	"empty-lines-between-children-rules": 0,
 	"sort-on-save": false
 }
 ```
