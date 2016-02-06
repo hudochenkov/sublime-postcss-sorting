@@ -2,6 +2,9 @@
 	// Sort order. Please visit https://github.com/hudochenkov/postcss-sorting for all rules and predefined configs
 	"sort-order": "default",
 
+	// Set a number of empty lines between nested children rules
+	"empty-lines-between-children-rules": 0,
+
 	// Set true to sort on save every file with supported syntax
 	"sort-on-save": false
 }
