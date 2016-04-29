@@ -1,0 +1,3 @@
+Version 1.4.0
+
+* Added `empty-lines-between-media-rules` option which set a number of empty lines between nested media rules.

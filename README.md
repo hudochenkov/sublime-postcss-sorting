@@ -36,6 +36,7 @@ You can specify sort order and grouping. See the [postcss-sorting documentation]
 {
 	"sort-order": "default",
 	"empty-lines-between-children-rules": 0,
+	"empty-lines-between-media-rules": 0,
 	"sort-on-save": false
 }
 ```

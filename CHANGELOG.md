@@ -2,6 +2,9 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.4.0
+* Added `empty-lines-between-media-rules` option which set a number of empty lines between nested media rules.
+
 ## 1.3.3
 * Update to postcss-sorting@1.2.3
 
