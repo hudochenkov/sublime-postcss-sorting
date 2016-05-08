@@ -56,7 +56,8 @@ class PostcsssortingCommand(sublime_plugin.TextCommand):
 			return node_bridge(data, BIN_PATH, [json.dumps({
 				'sort-order': get_setting(self.view, 'sort-order'),
 				'empty-lines-between-children-rules': get_setting(self.view, 'empty-lines-between-children-rules'),
-				'empty-lines-between-media-rules': get_setting(self.view, 'empty-lines-between-media-rules')
+				'empty-lines-between-media-rules': get_setting(self.view, 'empty-lines-between-media-rules'),
+				'preserve-empty-lines-between-children-rules': get_setting(self.view, 'preserve-empty-lines-between-children-rules')
 			})])
 		except Exception as e:
 			sublime.error_message('PostCSS Sorting\n%s' % e)

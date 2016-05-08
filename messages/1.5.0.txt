@@ -1,0 +1,3 @@
+Version 1.5.0
+
+* Added `preserve-empty-lines-between-children-rules`, which preserve empty lines between children rules and preserve empty lines for comments between children rules.

@@ -8,6 +8,9 @@
 	// Set a number of empty lines between nested media rules
 	"empty-lines-between-media-rules": 0,
 
+	// Preserve empty lines between children rules and preserve empty lines for comments between children rules
+	"preserve-empty-lines-between-children-rules": false,
+
 	// Set true to sort on save every file with supported syntax
 	"sort-on-save": false
 }
