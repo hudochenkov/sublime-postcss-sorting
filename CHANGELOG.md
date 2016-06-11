@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.6.0
+* Update to postcss-sorting@1.6.0
+* Update dependencies
+
 ## 1.5.1
 * Update to postcss-sorting@1.4.1
 
