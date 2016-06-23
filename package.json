@@ -3,7 +3,7 @@
     "get-stdin": "4.0.1",
     "postcss": "^5.0.21",
     "postcss-scss": "^0.1.8",
-    "postcss-sorting": "^1.6.0"
+    "postcss-sorting": "^1.6.1"
   },
   "private": true
 }
