@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.0.0
+
+* Update to postcss-sorting@2.0.1
+* Config for 2.0.0 is incompatible with previous configs. Please read migration guide and docs https://github.com/hudochenkov/postcss-sorting#migration-from-1x
+
 ## 1.7.0
 * Update to postcss-sorting@1.7.0
 

@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "get-stdin": "4.0.1",
-    "postcss": "^5.0.21",
-    "postcss-scss": "^0.1.8",
-    "postcss-sorting": "^1.7.0"
+    "postcss": "^5.2.10",
+    "postcss-scss": "^0.4.0",
+    "postcss-sorting": "^2.0.1"
   },
   "private": true
 }

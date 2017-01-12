@@ -1,0 +1,6 @@
+Version 2.0.0
+
+BREAKING CHANGES RELEASE!
+
+* Update to postcss-sorting@2.0.1
+* Config for 2.0.0 is incompatible with previous configs. Please read migration guide and docs https://github.com/hudochenkov/postcss-sorting#migration-from-1x

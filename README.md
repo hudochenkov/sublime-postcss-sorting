@@ -11,7 +11,7 @@ Works only with CSS, SCSS and PostCSS.
 
 Install `PostCSS Sorting` with [Package Control](https://packagecontrol.io/) and restart Sublime Text.
 
-**You need to have [Node.js](https://nodejs.org) >= 0.12.0 installed.**  
+**You need to have [Node.js](https://nodejs.org) >= 4.0.0 installed.**  
 Make sure it's in your $PATH by running `node -v` in your command-line.  
 On OS X you need to make sure it's in `/usr/local/bin` or symlink it there.
 
@@ -27,17 +27,13 @@ There is keyboard shortcut also: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kb
 
 *(Preferences → Package Settings → PostCSS Sorting → Settings - User)*
 
-You can specify sort order and grouping. See the [postcss-sorting documentation](https://github.com/hudochenkov/postcss-sorting#options) for all rules and predefined configs.
+You can specify sort order and other options. See the [postcss-sorting documentation](https://github.com/hudochenkov/postcss-sorting#options) for all options.
 
 
 #### Default
 
 ```json
 {
-	"sort-order": "default",
-	"empty-lines-between-children-rules": 0,
-	"empty-lines-between-media-rules": 0,
-	"preserve-empty-lines-between-children-rules": false,
 	"sort-on-save": false
 }
 ```
@@ -53,7 +49,7 @@ Example:
 {
 	"settings": {
 		"PostCSSSorting": {
-			"sort-order": ["padding", "margin"],
+			"properties-order": ["padding", "margin"],
 			"sort-on-save": true
 		}
 	}
