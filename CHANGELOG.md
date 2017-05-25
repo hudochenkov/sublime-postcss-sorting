@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.1.0
+
+* Update to postcss-sorting@2.1.0 https://github.com/hudochenkov/postcss-sorting/releases/tag/2.1.0
+* Add support for `n` Node.js version manager
+
 ## 2.0.0
 
 * Update to postcss-sorting@2.0.1
