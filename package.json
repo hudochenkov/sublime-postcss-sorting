@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "get-stdin": "4.0.1",
+    "get-stdin": "^5.0.1",
     "postcss": "^5.2.17",
     "postcss-scss": "^0.4.1",
     "postcss-sorting": "^2.1.0"
