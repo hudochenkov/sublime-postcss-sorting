@@ -1,0 +1,3 @@
+Version 2.1.1
+
+* Fixed a regression when `emptyLineBefore` wasn't working properly when `declaration-empty-line-before` wasn't set.

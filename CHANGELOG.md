@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 2.1.1
+
+* Fixed a regression when `emptyLineBefore` wasn't working properly when `declaration-empty-line-before` wasn't set.
+
 ## 2.1.0
 
 * Update to postcss-sorting@2.1.0 https://github.com/hudochenkov/postcss-sorting/releases/tag/2.1.0
