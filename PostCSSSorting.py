@@ -52,19 +52,40 @@ class PostcsssortingCommand(sublime_plugin.TextCommand):
 				self.view.replace(edit, region, processed)
 
 	def sorting(self, data):
+		sorting_options = {}
+
+		if get_setting(self.view, 'order'):
+			sorting_options['order'] = get_setting(self.view, 'order')
+
+		if get_setting(self.view, 'properties-order'):
+			sorting_options['properties-order'] = get_setting(self.view, 'properties-order')
+
+		if get_setting(self.view, 'unspecified-properties-position'):
+			sorting_options['unspecified-properties-position'] = get_setting(self.view, 'unspecified-properties-position')
+
+		if get_setting(self.view, 'clean-empty-lines'):
+			sorting_options['clean-empty-lines'] = get_setting(self.view, 'clean-empty-lines')
+
+		if get_setting(self.view, 'rule-nested-empty-line-before'):
+			sorting_options['rule-nested-empty-line-before'] = get_setting(self.view, 'rule-nested-empty-line-before')
+
+		if get_setting(self.view, 'at-rule-nested-empty-line-before'):
+			sorting_options['at-rule-nested-empty-line-before'] = get_setting(self.view, 'at-rule-nested-empty-line-before')
+
+		if get_setting(self.view, 'declaration-empty-line-before'):
+			sorting_options['declaration-empty-line-before'] = get_setting(self.view, 'declaration-empty-line-before')
+
+		if get_setting(self.view, 'custom-property-empty-line-before'):
+			sorting_options['custom-property-empty-line-before'] = get_setting(self.view, 'custom-property-empty-line-before')
+
+		if get_setting(self.view, 'dollar-variable-empty-line-before'):
+			sorting_options['dollar-variable-empty-line-before'] = get_setting(self.view, 'dollar-variable-empty-line-before')
+
+		if get_setting(self.view, 'comment-empty-line-before'):
+			sorting_options['comment-empty-line-before'] = get_setting(self.view, 'comment-empty-line-before')
+
 		try:
-			return node_bridge(data, BIN_PATH, [json.dumps({
-				'order': get_setting(self.view, 'order'),
-				'properties-order': get_setting(self.view, 'properties-order'),
-				'unspecified-properties-position': get_setting(self.view, 'unspecified-properties-position'),
-				'clean-empty-lines': get_setting(self.view, 'clean-empty-lines'),
-				'rule-nested-empty-line-before': get_setting(self.view, 'rule-nested-empty-line-before'),
-				'at-rule-nested-empty-line-before': get_setting(self.view, 'at-rule-nested-empty-line-before'),
-				'declaration-empty-line-before': get_setting(self.view, 'declaration-empty-line-before'),
-				'custom-property-empty-line-before': get_setting(self.view, 'custom-property-empty-line-before'),
-				'dollar-variable-empty-line-before': get_setting(self.view, 'dollar-variable-empty-line-before'),
-				'comment-empty-line-before': get_setting(self.view, 'comment-empty-line-before')
-			})])
+			return node_bridge(data, BIN_PATH, [json.dumps(sorting_options)])
 		except Exception as e:
 			sublime.error_message('PostCSS Sorting\n%s' % e)
 
