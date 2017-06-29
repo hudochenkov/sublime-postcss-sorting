@@ -14,14 +14,20 @@ sublime.Region.totuple = lambda self: (self.a, self.b)
 sublime.Region.__iter__ = lambda self: self.totuple().__iter__()
 
 BIN_PATH = join(sublime.packages_path(), dirname(realpath(__file__)), 'sorting.js')
+CONFIG_NAME = '.postcss-sorting.json'
 
 def get_setting(view, key):
-	settings = view.settings().get('PostCSSSorting')
+	setting = local_config.get(key)
 
-	if settings is None:
-		settings = sublime.load_settings('PostCSSSorting.sublime-settings')
+	if setting is None:
+		settings = view.settings().get('PostCSSSorting')
 
-	return settings.get(key)
+		if settings is None:
+			settings = sublime.load_settings('PostCSSSorting.sublime-settings')
+
+		setting = settings.get(key)
+
+	return setting
 
 def is_supported_syntax(view):
 	syntax = splitext(basename(view.settings().get('syntax')))[0]
@@ -30,6 +36,11 @@ def is_supported_syntax(view):
 
 class PostcsssortingCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
+		for folder in sublime.active_window().project_data()['folders']:
+			config_file = join(folder['path'], CONFIG_NAME)
+			with open(config_file) as data_file:
+				local_config = json.load(data_file)
+
 		if not self.has_selection():
 			region = sublime.Region(0, self.view.size())
 			originalBuffer = self.view.substr(region)
