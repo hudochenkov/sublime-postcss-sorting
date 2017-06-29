@@ -2,6 +2,7 @@ import sublime
 import sublime_plugin
 import json
 from os.path import dirname, realpath, join, basename, splitext
+from os import path
 
 try:
 	# Python 2
@@ -14,14 +15,36 @@ sublime.Region.totuple = lambda self: (self.a, self.b)
 sublime.Region.__iter__ = lambda self: self.totuple().__iter__()
 
 BIN_PATH = join(sublime.packages_path(), dirname(realpath(__file__)), 'sorting.js')
+CONFIG_NAMES = ['.postcss-sorting.json', 'postcss-sorting.json']
 
-def get_setting(view, key):
+def local_postcss_settings():
+	for folder in sublime.active_window().project_data()['folders']:
+		for config_name in CONFIG_NAMES:
+			config_file = join(folder['path'], config_name)
+			if path.isfile(config_file):
+				with open(config_file) as data_file:
+					return json.load(data_file)
+
+	return {}
+
+def sublime_project_settings(view):
 	settings = view.settings().get('PostCSSSorting')
 
 	if settings is None:
-		settings = sublime.load_settings('PostCSSSorting.sublime-settings')
+		settings = {}
 
-	return settings.get(key)
+	return settings
+
+def get_setting(view, key):
+	setting = local_postcss_settings().get(key)
+
+	if setting is None:
+		setting = sublime_project_settings(view).get(key)
+
+	if setting is None:
+		setting = sublime.load_settings('PostCSSSorting.sublime-settings').get(key)
+
+	return setting
 
 def is_supported_syntax(view):
 	syntax = splitext(basename(view.settings().get('syntax')))[0]
