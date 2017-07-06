@@ -2,6 +2,8 @@ import sublime
 import sublime_plugin
 import json
 from os.path import dirname, realpath, join, basename, splitext
+from os import path
+from pprint import pprint
 
 try:
 	# Python 2
@@ -17,7 +19,17 @@ BIN_PATH = join(sublime.packages_path(), dirname(realpath(__file__)), 'sorting.j
 CONFIG_NAME = '.postcss-sorting.json'
 
 def get_setting(view, key):
-	setting = local_config.get(key)
+	setting = None
+	local_config = None
+
+	for folder in sublime.active_window().project_data()['folders']:
+		config_file = join(folder['path'], CONFIG_NAME)
+		if path.isfile(config_file):
+			with open(config_file) as data_file:
+				local_config = json.load(data_file)
+
+	if (local_config):
+		setting = local_config.get(key)
 
 	if setting is None:
 		settings = view.settings().get('PostCSSSorting')
@@ -36,11 +48,6 @@ def is_supported_syntax(view):
 
 class PostcsssortingCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
-		for folder in sublime.active_window().project_data()['folders']:
-			config_file = join(folder['path'], CONFIG_NAME)
-			with open(config_file) as data_file:
-				local_config = json.load(data_file)
-
 		if not self.has_selection():
 			region = sublime.Region(0, self.view.size())
 			originalBuffer = self.view.substr(region)
