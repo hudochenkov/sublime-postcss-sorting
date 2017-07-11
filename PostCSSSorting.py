@@ -3,7 +3,6 @@ import sublime_plugin
 import json
 from os.path import dirname, realpath, join, basename, splitext
 from os import path
-from pprint import pprint
 
 try:
 	# Python 2
