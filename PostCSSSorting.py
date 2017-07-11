@@ -15,17 +15,18 @@ sublime.Region.totuple = lambda self: (self.a, self.b)
 sublime.Region.__iter__ = lambda self: self.totuple().__iter__()
 
 BIN_PATH = join(sublime.packages_path(), dirname(realpath(__file__)), 'sorting.js')
-CONFIG_NAME = '.postcss-sorting.json'
+CONFIG_NAMES = ['.postcss-sorting.json', 'postcss-sorting.json']
 
 def get_setting(view, key):
 	setting = None
 	local_config = None
 
 	for folder in sublime.active_window().project_data()['folders']:
-		config_file = join(folder['path'], CONFIG_NAME)
-		if path.isfile(config_file):
-			with open(config_file) as data_file:
-				local_config = json.load(data_file)
+		for config_name in CONFIG_NAMES:
+			config_file = join(folder['path'], config_name)
+			if path.isfile(config_file):
+				with open(config_file) as data_file:
+					local_config = json.load(data_file)
 
 	if (local_config):
 		setting = local_config.get(key)
