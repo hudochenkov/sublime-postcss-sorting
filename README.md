@@ -11,7 +11,7 @@ Works only with CSS, SCSS and PostCSS.
 
 Install `PostCSS Sorting` with [Package Control](https://packagecontrol.io/) and restart Sublime Text.
 
-**You need to have [Node.js](https://nodejs.org) >= 4.0.0 installed.**  
+**You need to have [Node.js](https://nodejs.org) 6+ installed.**  
 Make sure it's in your $PATH by running `node -v` in your command-line.  
 On OS X you need to make sure it's in `/usr/local/bin` or symlink it there.
 

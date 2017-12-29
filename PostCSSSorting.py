@@ -86,27 +86,6 @@ class PostcsssortingCommand(sublime_plugin.TextCommand):
 		if get_setting(self.view, 'unspecified-properties-position'):
 			sorting_options['unspecified-properties-position'] = get_setting(self.view, 'unspecified-properties-position')
 
-		if get_setting(self.view, 'clean-empty-lines'):
-			sorting_options['clean-empty-lines'] = get_setting(self.view, 'clean-empty-lines')
-
-		if get_setting(self.view, 'rule-nested-empty-line-before'):
-			sorting_options['rule-nested-empty-line-before'] = get_setting(self.view, 'rule-nested-empty-line-before')
-
-		if get_setting(self.view, 'at-rule-nested-empty-line-before'):
-			sorting_options['at-rule-nested-empty-line-before'] = get_setting(self.view, 'at-rule-nested-empty-line-before')
-
-		if get_setting(self.view, 'declaration-empty-line-before'):
-			sorting_options['declaration-empty-line-before'] = get_setting(self.view, 'declaration-empty-line-before')
-
-		if get_setting(self.view, 'custom-property-empty-line-before'):
-			sorting_options['custom-property-empty-line-before'] = get_setting(self.view, 'custom-property-empty-line-before')
-
-		if get_setting(self.view, 'dollar-variable-empty-line-before'):
-			sorting_options['dollar-variable-empty-line-before'] = get_setting(self.view, 'dollar-variable-empty-line-before')
-
-		if get_setting(self.view, 'comment-empty-line-before'):
-			sorting_options['comment-empty-line-before'] = get_setting(self.view, 'comment-empty-line-before')
-
 		try:
 			return node_bridge(data, BIN_PATH, [json.dumps(sorting_options)])
 		except Exception as e:

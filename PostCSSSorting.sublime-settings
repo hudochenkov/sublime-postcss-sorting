@@ -1,5 +1,14 @@
 {
 	// Please visit https://github.com/hudochenkov/postcss-sorting#options for all plugin options
+	// "order": [
+	// 	"custom-properties",
+	// 	"declarations"
+	// ],
+	// "properties-order": [
+	// 	"position",
+	// 	"display",
+	// ],
+	// "unspecified-properties-position": "bottom",
 
 	// Set true to sort on save every file with supported syntax
 	"sort-on-save": false
