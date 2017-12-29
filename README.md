@@ -25,7 +25,7 @@ There is keyboard shortcut also: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kb
 
 ### Options
 
-*(Preferences → Package Settings → PostCSS Sorting → Settings - User)*
+*(Preferences → Package Settings → PostCSS Sorting → Settings)*
 
 You can specify sort order and other options. See the [postcss-sorting documentation](https://github.com/hudochenkov/postcss-sorting#options) for all options.
 

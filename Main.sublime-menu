@@ -23,71 +23,21 @@
 						"caption": "PostCSS Sorting",
 						"children": [
 							{
-								"command": "open_file",
+								"caption": "Settings",
+								"command": "edit_settings",
 								"args": {
-									"file": "${packages}/PostCSS Sorting/PostCSSSorting.sublime-settings"
-								},
-								"caption": "Settings – Default"
+									"base_file": "${packages}/PostCSS Sorting/PostCSSSorting.sublime-settings",
+									"default": "${packages}/User/PostCSSSorting.sublime-settings"
+								}
 							},
 							{
-								"command": "open_file",
+								"caption": "Key Bindings",
+								"command": "edit_settings",
 								"args": {
-									"file": "${packages}/User/PostCSSSorting.sublime-settings"
-								},
-								"caption": "Settings – User"
-							},
-							{
-								"caption": "-"
-							},
-							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/PostCSS Sorting/Default (Windows).sublime-keymap",
-									"platform": "Windows"
-								},
-								"caption": "Key Bindings – Default"
-							},
-							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/PostCSS Sorting/Default (OSX).sublime-keymap",
-									"platform": "OSX"
-								},
-								"caption": "Key Bindings – Default"
-							},
-							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/PostCSS Sorting/Default (Linux).sublime-keymap",
-									"platform": "Linux"
-								},
-								"caption": "Key Bindings – Default"
-							},
-							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (Windows).sublime-keymap",
-									"platform": "Windows"
-								},
-								"caption": "Key Bindings – User"
-							},
-							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (OSX).sublime-keymap",
-									"platform": "OSX"
-								},
-								"caption": "Key Bindings – User"
-							},
-							{
-								"command": "open_file",
-								"args": {
-									"file": "${packages}/User/Default (Linux).sublime-keymap",
-									"platform": "Linux"
-								},
-								"caption": "Key Bindings – User"
-							},
-							{ "caption": "-" }
+									"base_file": "${packages}/PostCSS Sorting/Default ($platform).sublime-keymap",
+									"default": "${packages}/User/Default ($platform).sublime-keymap"
+								}
+							}
 						]
 					}
 				]
