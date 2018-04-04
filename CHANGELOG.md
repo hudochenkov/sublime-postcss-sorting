@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 3.0.1
+
+* Fix for a crash if file was opened outside of a project.
+
+## 3.0.0
+
+BREAKING CHANGES!
+
+* Update to postcss-sorting@3.1.0
+* Config for 3.0.0 might be partially incompatible with 2.0.0 config. Please read migration guide and postcss-sorting release notes:
+	* Release notes: https://github.com/hudochenkov/postcss-sorting/releases/tag/3.0.0
+	* Migration guide from 2.x: https://github.com/hudochenkov/postcss-sorting#migration-from-2x
+* Added support for config in `postcss-sorting.json` and `.postcss-sorting.json`, which could be located in the root folder of a project.
+
 ## 2.1.1
 
 * Fixed a regression when `emptyLineBefore` wasn't working properly when `declaration-empty-line-before` wasn't set.
