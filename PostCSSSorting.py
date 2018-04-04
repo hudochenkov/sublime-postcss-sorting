@@ -18,12 +18,13 @@ BIN_PATH = join(sublime.packages_path(), dirname(realpath(__file__)), 'sorting.j
 CONFIG_NAMES = ['.postcss-sorting.json', 'postcss-sorting.json']
 
 def local_postcss_settings():
-	for folder in sublime.active_window().project_data()['folders']:
-		for config_name in CONFIG_NAMES:
-			config_file = join(folder['path'], config_name)
-			if path.isfile(config_file):
-				with open(config_file) as data_file:
-					return json.load(data_file)
+	if sublime.active_window().project_data():
+		for folder in sublime.active_window().project_data()['folders']:
+			for config_name in CONFIG_NAMES:
+				config_file = join(folder['path'], config_name)
+				if path.isfile(config_file):
+					with open(config_file) as data_file:
+						return json.load(data_file)
 
 	return {}
 
