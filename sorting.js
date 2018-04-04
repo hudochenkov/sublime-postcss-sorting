@@ -7,7 +7,7 @@ var sorting = require('postcss-sorting');
 getStdin().then(function (data) {
 	var opts = JSON.parse(process.argv[2]);
 
-	postcss(sorting(opts)).process(data, { syntax: scss })
+	postcss(sorting(opts)).process(data, { syntax: scss, from: undefined })
 	.then(function (result) {
 		process.stdout.write(result.css);
 	}).catch(function (err) {
