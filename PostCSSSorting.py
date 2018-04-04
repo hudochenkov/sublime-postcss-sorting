@@ -3,12 +3,7 @@ import sublime_plugin
 import json
 from os.path import dirname, realpath, join, basename, splitext
 from os import path
-
-try:
-	# Python 2
-	from node_bridge import node_bridge
-except:
-	from .node_bridge import node_bridge
+from .node_bridge import node_bridge
 
 # monkeypatch `Region` to be iterable
 sublime.Region.totuple = lambda self: (self.a, self.b)
