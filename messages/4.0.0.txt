@@ -1,0 +1,3 @@
+Version 4.0.0
+
+* Updated to postcss-sorting@4.0.0. Read more about release: https://github.com/hudochenkov/postcss-sorting/releases/tag/4.0.0

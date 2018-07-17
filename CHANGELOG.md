@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+This project adheres to [Semantic Versioning](https://semver.org/).
+
+## 4.0.0
+
+* Updated to postcss-sorting@4.0.0. Read more about release: https://github.com/hudochenkov/postcss-sorting/releases/tag/4.0.0
 
 ## 3.0.1
 
